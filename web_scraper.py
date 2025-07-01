@@ -11,7 +11,7 @@ def paginas(driver, ids):
             return "1" 
     try:
         for pagina in lista:
-            time.sleep(15)
+            time.sleep(10)
             enlace = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.LINK_TEXT, pagina)))
             enlace.click()
 
