@@ -51,11 +51,11 @@ def screenshot(ids, driver):
     name_screenshot = f"casa_{ids}"
     driver.get_screenshot_as_file(f"{name_screenshot}.png")
     
-def obtener_info(ids):
+def obtener_info(ids, fecha_llegada, fecha_partida, huespedes):
     driver = None
     try:
         driver = webdriver.Chrome()
-        driver.get(f"https://es.airbnb.com/s/Orlando--Florida/homes?&checkin={fecha_llegada}&checkout={fecha_partida}&adults={huespedesa}")
+        driver.get(f"https://es.airbnb.com/s/Orlando--Florida/homes?&checkin={fecha_llegada}&checkout={fecha_partida}&adults={huespedes}")
         driver.maximize_window()
         
         cerrar_ventana(driver)
